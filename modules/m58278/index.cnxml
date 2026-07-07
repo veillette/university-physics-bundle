@@ -212,7 +212,7 @@ We take the origin of the Cartesian coordinate system as the control tower. The 
 <para id="fs-id1167132230028"> If the average velocity vector of the drone in the displacement in <link target-id="fs-id1167132572875"/> is <m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mover accent="true"><m:mi>u</m:mi><m:mo stretchy="false">→</m:mo></m:mover></m:mstyle><m:mo>=</m:mo><m:mo stretchy="false">(</m:mo><m:mn>15.0</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mover accent="true"><m:mi>i</m:mi><m:mo>^</m:mo></m:mover></m:mstyle><m:mo>+</m:mo><m:mn>31.7</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mover accent="true"><m:mi>j</m:mi><m:mo>^</m:mo></m:mover></m:mstyle><m:mo>+</m:mo><m:mn>2.5</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mover accent="true"><m:mi>k</m:mi><m:mo>^</m:mo></m:mover></m:mstyle><m:mo stretchy="false">)</m:mo><m:mrow><m:mtext>m</m:mtext><m:mtext>/</m:mtext><m:mtext>s</m:mtext></m:mrow></m:mrow></m:math>, what is the magnitude of the drone’s velocity vector?</para>
 </problem>
 <solution id="fs-id1167132346740">
-<para id="fs-id1167133751212">35.2 m/s = 126.4 km/h</para>
+<para id="fs-id1167133751212">35.2 m/s = 126.7 km/h</para>
 </solution>
 </exercise>
 </note>
@@ -273,7 +273,7 @@ We take the origin of the Cartesian coordinate system as the control tower. The 
 <title>Problems</title>
 <exercise id="fs-id1167132612418"><problem id="fs-id1167132612420">
 <para id="fs-id1167132312139">Assuming the +<emphasis effect="italics">x</emphasis>-axis is horizontal and points to the right, resolve the vectors given in the following figure to their scalar components and express them in vector component form.</para>
-<media id="fs-id1262132294765" alt="">
+<media id="fs-id1262132294765" alt="The figure shows an x-y axis in the upper left corner followed by 5 unique vectors drawn on the x-y plane. Vector A has a magnitude of 10.0 and points 30 degrees above the x-axis. Vector B has a magnitude of 5.0 and points 53 degrees above the x-axis. Vector C has a magnitude of 12.0 and points 60 degrees below the x-axis. Vector D has a magnitude of 20.0 and points 37 degrees above the negative x-axis. Vector E has a magnitude of 20.0 and points 30 degrees below the negative x-axis.">
 <image mime-type="image/jpeg" src="../../media/CNX_UPhysics_02_01_problems_img_new.jpg"/>
 </media>
 </problem>
@@ -333,7 +333,7 @@ We take the origin of the Cartesian coordinate system as the control tower. The 
 <para id="fs-id1167132372735">Two points in the Cartesian plane are <emphasis effect="italics">A</emphasis>(2.00 m, −4.00 m) and <emphasis effect="italics">B</emphasis>(−3.00 m, 3.00 m). Find the distance between them and their polar coordinates.</para>
 </problem>
 <solution id="fs-id1167132372708">
-<para id="fs-id1167132340314">8.60 m, <m:math><m:mrow><m:mi>A</m:mi><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>5</m:mn></m:msqrt><m:mspace width="0.2em"/><m:mtext>m</m:mtext><m:mo>,</m:mo><m:mn>0.647</m:mn><m:mi>π</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math>, <m:math><m:mrow><m:mi>B</m:mi><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mspace width="0.2em"/><m:mtext>m</m:mtext><m:mo>,</m:mo><m:mn>0.75</m:mn><m:mi>π</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math></para>
+<para id="fs-id1167132340314">8.60 m, <m:math><m:mrow><m:mi>A</m:mi><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>5</m:mn></m:msqrt><m:mspace width="0.2em"/><m:mtext>m</m:mtext><m:mo>,</m:mo><m:mn>1.647</m:mn><m:mi>π</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math>, <m:math><m:mrow><m:mi>B</m:mi><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mspace width="0.2em"/><m:mtext>m</m:mtext><m:mo>,</m:mo><m:mn>0.75</m:mn><m:mi>π</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1167132441243">

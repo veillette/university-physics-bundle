@@ -53,7 +53,7 @@
 </note>
 <example id="fs-id1167131117749">
 <para id="fs-id1167131150786"><title>Magnifying a Diamond</title>
-A jeweler wishes to inspect a 3.0-mm-diameter diamond with a magnifier. The diamond is held at the jeweler’s near point (25 cm), and the jeweler holds the magnifying lens close to his eye.</para>
+A jeweler wishes to inspect a 3.0-mm-diameter diamond with a magnifier. The diamond is held so that the image is at the jeweler’s near point (25 cm), and the jeweler holds the magnifying lens close to his eye.</para>
 <para id="fs-id1167134681428">(a) What should the focal length of the magnifying lens be to see a 15-mm-diameter image of the diamond?</para>
 <para id="fs-id1167131231890">(b) What should the focal length of the magnifying lens be to obtain <m:math><m:mrow><m:mn>10</m:mn><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/></m:mrow></m:math> magnification?</para>
 <para id="fs-id1167131327385"><title>Strategy</title>
@@ -130,7 +130,7 @@ Note that a greater magnification is achieved by using a lens with a smaller foc
 </exercise>
 <exercise id="fs-id1167134674758">
 <problem id="fs-id1167131273384">
-<para id="fs-id1167134682345">A magnifying glass forms an image 10 cm on the opposite side of the lens from the object, which is 10 cm away. What is the magnification of this lens for a person with a normal near point if their eye 12 cm from the object?</para>
+<para id="fs-id1167134682345">A magnifying glass forms an image 10 cm on the opposite side of the lens from the object, which is 10 cm away. What is the magnification of this lens for a person with a normal near point if their eye is 12 cm from the image?</para>
 </problem>
 <solution id="fs-id1167134653213">
 <para id="fs-id1167134678380"><m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>M</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>−2.1</m:mn><m:mspace width="0.2em"/><m:mo>×</m:mo></m:mtd></m:mtr></m:mtable></m:math></para>

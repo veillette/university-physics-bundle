@@ -77,7 +77,7 @@ For <m:math><m:mrow><m:msup><m:mrow/><m:mn>4</m:mn></m:msup><m:mtext>He</m:mtext
 <para id="fs-id1170902950082">Since <m:math><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> the total binding energy per nucleon is</para>
 <equation id="fs-id1170902865527" class="unnumbered"><label/><m:math><m:mrow><m:mtext>BEN</m:mtext><m:mo>=</m:mo><m:mn>6.82</m:mn><m:mspace width="0.2em"/><m:mtext>MeV</m:mtext><m:mtext>/</m:mtext><m:mtext>nucleon</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1170903050428"><title>Significance</title>
-Notice that the binding energy per nucleon for <m:math><m:mrow><m:msup><m:mrow/><m:mn>4</m:mn></m:msup><m:mtext>He</m:mtext></m:mrow></m:math> is much greater than for the hydrogen isotopes <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>only</m:mtext><m:mo>≈</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>MeV</m:mtext><m:mtext>/</m:mtext><m:mtext>nucleon</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Therefore, helium nuclei cannot break down hydrogen isotopes without energy being put into the system.</para>
+Notice that the binding energy per nucleon for <m:math><m:mrow><m:msup><m:mrow/><m:mn>4</m:mn></m:msup><m:mtext>He</m:mtext></m:mrow></m:math> is much greater than for the hydrogen isotopes <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>only</m:mtext><m:mo>≈</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>MeV</m:mtext><m:mtext>/</m:mtext><m:mtext>nucleon</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Therefore, helium nuclei cannot break down into hydrogen isotopes without energy being put into the system.</para>
 </example>
 <note id="fs-id1170902957111" class="check-understanding">
 <exercise id="fs-id1170902780878">
@@ -156,7 +156,7 @@ Notice that the binding energy per nucleon for <m:math><m:mrow><m:msup><m:mrow/>
 <para id="fs-id1170901530380">(a) Calculate BEN for <m:math><m:mrow><m:msup><m:mrow/><m:mrow><m:mn>235</m:mn></m:mrow></m:msup><m:mtext>U</m:mtext></m:mrow></m:math>, the rarer of the two most common uranium isotopes; (b) Calculate BEN for <m:math><m:mrow><m:msup><m:mrow/><m:mrow><m:mn>238</m:mn></m:mrow></m:msup><m:mtext>U</m:mtext></m:mrow></m:math>. (Most of uranium is <m:math><m:mrow><m:msup><m:mrow/><m:mrow><m:mn>238</m:mn></m:mrow></m:msup><m:mtext>U</m:mtext></m:mrow></m:math>.)</para>
 </problem>
 <solution id="fs-id1170902936327">
-<para id="fs-id1170902938055">a. 7.570 MeV; b. <m:math><m:mrow><m:mn>7.591</m:mn><m:mspace width="0.2em"/><m:mtext>MeV</m:mtext><m:mo>≈</m:mo><m:mtext>graph’s value</m:mtext></m:mrow></m:math></para>
+<para id="fs-id1170902938055">a. <m:math><m:mrow><m:mn>7.591</m:mn><m:mspace width="0.2em"/><m:mtext>MeV</m:mtext><m:mo>≈</m:mo><m:mtext>graph’s value</m:mtext></m:mrow></m:math>; b. 7.570 MeV</para>
 </solution>
 </exercise>
 <exercise id="fs-id1170902685226">

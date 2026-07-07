@@ -109,10 +109,10 @@ Consortium, ESA, NASA credit “solar panels”: “modification of work by “k
 </exercise>
 <exercise id="fs-id1165037976761">
 <problem id="fs-id1165037217276">
-<para id="fs-id1165037199774">In the reality television show <link url="https://openstax.org/l/21amazraceclip">“Amazing Race”</link>, a contestant is firing 12-kg watermelons from a slingshot to hit targets down the field. The slingshot is pulled back 1.5 m and the watermelon is considered to be at ground level. The launch point is 0.3 m from the ground and the targets are 10 m horizontally away. Calculate the spring constant of the slingshot.</para>
+<para id="fs-id1165037199774">In the reality television show <link url="https://openstax.org/l/21amazraceclip">“Amazing Race”</link>, a contestant is firing 3.0-kg watermelons from a slingshot to hit targets down the field. The slingshot is pulled back 2.0 m and the watermelon is considered to be at ground level. The launch point is 0.75 m from the ground and the targets are 10 m horizontally away. Calculate the spring constant of the slingshot.</para>
 </problem>
 <solution id="fs-id1165037012070">
-<para id="fs-id1165038052095">8700 N/m</para>
+<para id="fs-id1165038052095">490 N/m</para>
 </solution>
 </exercise>
 <exercise id="fs-id1165037224601">
@@ -228,7 +228,7 @@ Consortium, ESA, NASA credit “solar panels”: “modification of work by “k
 </exercise>
 <exercise id="fs-id1165038011534">
 <problem id="fs-id1165036965272">
-<para id="fs-id1165037894964">A particle of mass 2.0 kg moves under the influence of the force <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−5</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>7</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>N</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Suppose a frictional force also acts on the particle. If the particle’s speed when it starts at <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>−4.0</m:mn><m:mspace width="0.2em"/><m:mtext>m</m:mtext></m:mrow></m:math> is 0.0 m/s and when it arrives at <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4.0</m:mn><m:mspace width="0.2em"/><m:mtext>m</m:mtext></m:mrow></m:math> is 9.0 m/s, how much work is done on it by the frictional force between <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>−4.0</m:mn><m:mspace width="0.2em"/><m:mtext>m</m:mtext></m:mrow></m:math> and <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4.0</m:mn><m:mspace width="0.2em"/><m:mtext>m?</m:mtext></m:mrow></m:math></para>
+<para id="fs-id1165037894964">A particle of mass 2.0 kg moves under the influence of the force <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>7</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>N</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Suppose a frictional force also acts on the particle. If the particle’s speed when it starts at <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>−4.0</m:mn><m:mspace width="0.2em"/><m:mtext>m</m:mtext></m:mrow></m:math> is 0.0 m/s and when it arrives at <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4.0</m:mn><m:mspace width="0.2em"/><m:mtext>m</m:mtext></m:mrow></m:math> is 9.0 m/s, how much work is done on it by the frictional force between <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>−4.0</m:mn><m:mspace width="0.2em"/><m:mtext>m</m:mtext></m:mrow></m:math> and <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4.0</m:mn><m:mspace width="0.2em"/><m:mtext>m?</m:mtext></m:mrow></m:math></para>
 </problem>
 </exercise>
 <exercise id="fs-id1165038107242">

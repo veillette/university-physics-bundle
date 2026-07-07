@@ -345,7 +345,7 @@ e. <m:math><m:mrow><m:mn>1.92</m:mn><m:mspace width="0.2em"/><m:mo>×</m:mo><m:m
 </exercise>
 <exercise id="fs-id1171361663412">
 <problem id="fs-id1171361662643">
-<para id="fs-id1171361662645">A 1.0-m-long segment of wire lies along the <emphasis effect="italics">x</emphasis>-axis and carries a current of 2.0 A in the positive <emphasis effect="italics">x</emphasis>-direction. Around the wire is the magnetic field of <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3.0</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mover accent="true"><m:mi>i</m:mi><m:mo>^</m:mo></m:mover></m:mstyle><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mn>4.0</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mover accent="true"><m:mi>k</m:mi><m:mo>^</m:mo></m:mover></m:mstyle></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:msup><m:mrow><m:mn>10</m:mn></m:mrow><m:mrow><m:mn>−3</m:mn></m:mrow></m:msup><m:mtext>T</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Find the magnetic force on this segment.</para>
+<para id="fs-id1171361662645">A 1.0-m-long segment of wire lies along the <emphasis effect="italics">x</emphasis>-axis and carries a current of 2.0 A in the positive <emphasis effect="italics">x</emphasis>-direction. Around the wire is the magnetic field of <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3.0</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mover accent="true"><m:mi>i</m:mi><m:mo>^</m:mo></m:mover></m:mstyle><m:mspace width="0.2em"/><m:mo>+</m:mo><m:mspace width="0.2em"/><m:mn>4.0</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mover accent="true"><m:mi>k</m:mi><m:mo>^</m:mo></m:mover></m:mstyle></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:msup><m:mrow><m:mn>10</m:mn></m:mrow><m:mrow><m:mn>−3</m:mn></m:mrow></m:msup><m:mtext>T</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Find the magnetic force on this segment.</para>
 </problem>
 </exercise>
 <exercise id="fs-id1171361652170">
@@ -367,7 +367,7 @@ e. <m:math><m:mrow><m:mn>1.92</m:mn><m:mspace width="0.2em"/><m:mo>×</m:mo><m:m
 <exercise id="fs-id1171361424258">
 <problem id="fs-id1171361424260">
 <para id="fs-id1171361667307">The current loop shown in the accompanying figure lies in the plane of the page, as does the magnetic field. Determine the net force and the net torque on the loop if <emphasis effect="italics">I</emphasis> = 10 A and <emphasis effect="italics">B</emphasis> = 1.5 T.</para>
-<media id="fs-id1171361346104" alt="The current loop forms a parallelogram: the top and bottom are horizontal and 10 cm long, the sides are tilted at an angle of 60 degrees up from the +x direction and are 8.0 cm long. A current of 20 A flows counterclockwise. The magnetic field is up.">
+<media id="fs-id1171361346104" alt="The current loop forms a parallelogram: the top and bottom are horizontal and 10 cm long, the sides are tilted at an angle of 60 degrees up from the +x direction and are 8.0 cm long. A current of 10 A flows counterclockwise. The magnetic field is up.">
 <image mime-type="image/jpeg" src="../../media/CNX_UPhysics_28_05_recttorque.jpg"/>
 </media>
 </problem>
@@ -384,7 +384,7 @@ e. <m:math><m:mrow><m:mn>1.92</m:mn><m:mspace width="0.2em"/><m:mo>×</m:mo><m:m
 <para id="fs-id1171358225964">A circular coil of wire of radius 5.0 cm has 20 turns and carries a current of 2.0 A. The coil lies in a magnetic field of magnitude 0.50 T that is directed parallel to the plane of the coil. (a) What is the magnetic dipole moment of the coil? (b) What is the torque on the coil?</para>
 </problem>
 <solution id="fs-id1171361447536">
-<para id="fs-id1171361447538">a. <m:math><m:mrow><m:mn>0.31</m:mn><m:mspace width="0.2em"/><m:msup><m:mtext>Am</m:mtext><m:mn>2</m:mn></m:msup><m:mo>;</m:mo></m:mrow></m:math> b. 0.16 Nm</para>
+<para id="fs-id1171361447538">a. <m:math><m:mrow><m:mn>0.0157</m:mn><m:mspace width="0.2em"/><m:msup><m:mtext>Am</m:mtext><m:mn>2</m:mn></m:msup><m:mo>;</m:mo></m:mrow></m:math> b. 0.0078 Nm</para>
 </solution>
 </exercise>
 <exercise id="fs-id1171361308469">
@@ -512,7 +512,7 @@ The Hall voltage is inversely proportional to the diameter of the wire.</para>
 </exercise>
 <exercise id="fs-id1171361726426">
 <problem id="fs-id1171361726428">
-<para id="fs-id1171361726430">A particle’s path is bent when it passes through a region of non-zero magnetic field although its speed remains unchanged. This is very useful for “beam steering” in particle accelerators. Consider a proton of speed <m:math><m:mrow><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:msup><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>6</m:mn></m:msup><m:mtext>m/s</m:mtext></m:mrow></m:math> entering a region of uniform magnetic field 0.2 T over a 5-cm-wide region. Magnetic field is perpendicular to the velocity of the particle. By how much angle will the path of the proton be bent? (Hint: The particle comes out tangent to a circle.)</para>
+<para id="fs-id1171361726430">A particle’s path is bent when it passes through a region of non-zero magnetic field although its speed remains unchanged. This is very useful for “beam steering” in particle accelerators. Consider a proton travelling with speed <m:math><m:mrow><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:msup><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>6</m:mn></m:msup><m:mtext>m/s</m:mtext></m:mrow></m:math> entering a region of uniform magnetic field. The magnetic field is perpendicular to the velocity of the particle and has strength 0.2 T over a 5-cm-wide region. By what angle will the path of the proton be bent? (Hint: The particle comes out tangent to a circle. Do not use small angle approximation.)</para>
 <media id="fs-id1171358226174" alt="The particle enters the region with field from the left with a horizontal velocity to the right. It exits at an angle theta above the horizontal (right) direction. The region with field is 5 cm wide.">
 <image mime-type="image/jpeg" src="../../media/CNX_UPhysics_28_07_challenge3.jpg"/>
 </media>
@@ -528,7 +528,7 @@ The Hall voltage is inversely proportional to the diameter of the wire.</para>
 </exercise>
 <exercise id="fs-id1171361261560">
 <problem id="fs-id1171361261562">
-<para id="fs-id1171361259162">A copper rod of mass <emphasis effect="italics">m</emphasis> and length <emphasis effect="italics">L</emphasis> is hung from the ceiling using two springs of spring constant <emphasis effect="italics">k</emphasis>. A uniform magnetic field of magnitude <m:math><m:mrow><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> pointing perpendicular to the rod and spring (coming into the page in the figure) exists in a region of space covering a length <emphasis effect="italics">w</emphasis> of the copper rod. The ends of the rod are then connected by flexible copper wire across the terminals of a battery of voltage <emphasis effect="italics">V</emphasis>. Determine the change in the length of the springs when <emphasis effect="italics">a</emphasis> current <emphasis effect="italics">I</emphasis> runs through the copper rod in the direction shown in figure. (Ignore any force by the flexible wire.)</para>
+<para id="fs-id1171361259162">A copper rod of mass <emphasis effect="italics">m</emphasis> and length <emphasis effect="italics">L</emphasis> is hung from the ceiling using two springs of spring constant <emphasis effect="italics">k</emphasis>. A uniform magnetic field of magnitude <m:math><m:mrow><m:msub><m:mi>B</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> pointing perpendicular to the rod and spring (coming into the page in the figure) exists in a region of space covering a length <emphasis effect="italics">w</emphasis> of the copper rod. The ends of the rod are then connected by flexible copper wire across the terminals of a battery of voltage <emphasis effect="italics">V</emphasis>. Determine the change in the length of the springs when a current <emphasis effect="italics">I</emphasis> runs through the copper rod in the direction shown in figure. (Ignore any force by the flexible wire.)</para>
 <media id="fs-id1171361248351" alt="An illustration of the problem. The copper rod is horizontal and hangs from springs at either end. A current I flows to the right through the rod. A field B points into the page in a region width w.">
 <image mime-type="image/jpeg" src="../../media/CNX_UPhysics_28_07_challenge5.jpg"/>
 </media>
