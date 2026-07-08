@@ -5,13 +5,16 @@
 
 **Read online: <https://veillette.github.io/university-physics-bundle/>**
 
-This is a fork of the OpenStax
+This repository wraps the OpenStax
 [osbooks-university-physics-bundle](https://github.com/openstax/osbooks-university-physics-bundle)
-that adds an [Eleventy](https://www.11ty.dev/) build rendering the CNXML source
-of _University Physics_ Volumes 1–3 (338 pages from 322 modules) as a
-browsable, installable web site. The content files (`collections/`, `modules/`,
-`media/`) are **never modified** — all transformation happens at build time, so
-merges from the OpenStax upstream stay clean.
+CNXML source (a fork living in the [`source/`](./source) submodule, pinned at
+the `OpenPhysics/osbooks-university-physics-bundle` fork) and adds an
+[Eleventy](https://www.11ty.dev/) build that renders _University Physics_
+Volumes 1–3 (338 pages from 322 modules) as a browsable, installable web site.
+The submodule is the only place content (`source/collections/`,
+`source/modules/`, `source/media/`) lives and it is **never modified** here —
+all transformation happens at build time, so pulling upstream errata is a clean
+submodule bump.
 
 ## Features
 
@@ -33,6 +36,8 @@ merges from the OpenStax upstream stay clean.
 ## Building
 
 ```bash
+# first-time: initialize the source/ submodule (or clone with --recursive)
+git submodule update --init --recursive
 npm ci
 npm run update:vendor   # copy self-hosted MathJax (+fonts) and MiniSearch into assets/
 npm run build           # build _site/ + search index
@@ -42,6 +47,23 @@ npm run verify          # post-build checks over _site/
 
 Requires Node ≥ 22. See [BUILDING.md](./BUILDING.md) for architecture,
 deployment (GitHub Pages / Vercel), and gotchas.
+
+## Updating the OpenStax source
+
+The textbook content is tracked as the `source/` submodule pointing at the
+`OpenPhysics/osbooks-university-physics-bundle` fork of OpenStax. To pull new
+upstream errata:
+
+```bash
+# 1. (in the fork) sync it with openstax upstream, push to OpenPhysics/...
+# 2. (here) bump the submodule pointer to the fork's latest commit:
+cd source && git fetch origin && git checkout openstax/main && cd ..
+git add source
+git commit -m "bump openstax source: <errata>"
+```
+
+This records a single submodule-SHA change rather than replaying upstream
+history into this repo.
 
 ## Continuous integration
 

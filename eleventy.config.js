@@ -8,10 +8,11 @@ export default function (eleventyConfig) {
   // input exclusions explicitly from .eleventyignore rather than .gitignore.
   eleventyConfig.setUseGitIgnore(false);
 
-  // The CNXML source is not part of Eleventy's template graph (it is read by
-  // _data/book.js), so watch it manually for dev-server rebuilds.
-  eleventyConfig.addWatchTarget('./modules/');
-  eleventyConfig.addWatchTarget('./collections/');
+  // The CNXML source (in the source/ submodule) is not part of Eleventy's
+  // template graph (it is read by _data/book.js), so watch it manually for
+  // dev-server rebuilds.
+  eleventyConfig.addWatchTarget('./source/modules/');
+  eleventyConfig.addWatchTarget('./source/collections/');
   eleventyConfig.addWatchTarget('./lib/');
 
   // Root-relative asset/link URLs get the pathPrefix at build time. Narrow regex
@@ -32,10 +33,12 @@ export default function (eleventyConfig) {
   // with /SUMMARY.html etc.).
   eleventyConfig.addFilter('trimSlash', v => String(v).replace(/\/+$/, ''));
 
-  // Passthrough paths are relative to the project root. The media glob excludes
-  // .DS_Store and a handful of stray extensionless files present upstream.
-  eleventyConfig.addPassthroughCopy('media/*.{jpg,jpeg,png}');
-  eleventyConfig.addPassthroughCopy('cover');
+  // Passthrough: copy media + cover out of the source/ submodule into /media/
+  // and /cover/ at the site root (object form remaps the output URL so it stays
+  // root-relative). The media glob excludes .DS_Store and a handful of stray
+  // extensionless files present upstream.
+  eleventyConfig.addPassthroughCopy({ 'source/media/*.{jpg,jpeg,png}': 'media' });
+  eleventyConfig.addPassthroughCopy({ 'source/cover': 'cover' });
   eleventyConfig.addPassthroughCopy({ assets: 'assets' });
 
   // Dev server: serve passthrough files from their source location instead of

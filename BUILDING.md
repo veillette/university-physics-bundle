@@ -1,14 +1,17 @@
 # Building the HTML site
 
-This repo contains the OpenStax *University Physics* CNXML source (3 volumes,
-322 modules) plus an [Eleventy](https://www.11ty.dev/) build that renders it as
-a browsable HTML site. **The content files (`collections/`, `modules/`,
-`media/`) are never modified** — all transformation happens at build time, so
-merges from the openstax upstream stay clean.
+This repo wraps the OpenStax *University Physics* CNXML source (3 volumes,
+322 modules) — which lives in the `source/` submodule (a fork of
+[openstax/osbooks-university-physics-bundle](https://github.com/openstax/osbooks-university-physics-bundle))
+— plus an [Eleventy](https://www.11ty.dev/) build that renders it as a
+browsable HTML site. **The content under `source/` (`collections/`, `modules/`,
+`media/`) is never modified** here — all transformation happens at build time,
+so pulling upstream errata is a clean submodule bump.
 
 ## Quick start
 
 ```bash
+git submodule update --init --recursive   # populate source/ (the OpenStax CNXML)
 npm ci
 npm run update:vendor    # copy the self-hosted MathJax (+fonts) and MiniSearch bundles into assets/
 npm run build            # build _site/ + search index
@@ -19,7 +22,8 @@ Requires Node ≥ 22.
 
 ## How it works
 
-- `_data/book.js` → `lib/book-data.js` parses `META-INF/books.xml` → the three
+- `_data/book.js` passes `source/` as the content root to `lib/book-data.js`,
+  which parses `META-INF/books.xml` → the three
   CollXML collections → all 322 CNXML modules, in two passes:
   1. **Model pass** (`lib/parse/`, `lib/model/`): assigns chapter/section
      numbers and OpenStax-style slugs (`/university-physics-volume-1/1-3-unit-conversion/`),
@@ -88,8 +92,8 @@ GitHub Actions:
 
 - The dev server does **not** hot-reload changes to `lib/` (Node's ESM cache
   keeps transitive imports of `_data/book.js`); restart `npm run serve` after
-  editing build code. Content edits under `modules/`/`collections/` rebuild
-  fine.
+editing build code. Content edits under `source/modules/`/`source/collections/`
+rebuild fine.
 - `assets/js/mathjax/` (MathJax + fonts) and `assets/js/vendor/` (MiniSearch)
   are git-ignored and populated by `npm run update:vendor`; a fresh clone
   must run it before building or math/search will 404.
