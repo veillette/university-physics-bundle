@@ -607,13 +607,21 @@ h4 {
   margin-inline: auto;
 }
 
-.book .book-body .page-wrapper .page-inner section {
+.book .book-body .page-wrapper .page-inner section.normal {
   margin: 0;
   padding: var(--spacing-xs) var(--spacing-md);
   background: var(--color-bg-sidebar);
   border-radius: 2px;
   line-height: 1.6em;
   font-size: var(--font-size-section);
+}
+
+/* CNXML subsections (e.g. Discoveries) are nested <section> elements — no card background */
+.book .book-body .page-wrapper .page-inner section.normal section {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
 }
 
 @media (max-width: 1240px) {
@@ -1450,8 +1458,9 @@ body.dark-mode .abstract::before {
   color: var(--color-dark-text-muted);
 }
 
-body.dark-mode .glossary {
+body.dark-mode .book .book-body .page-wrapper .page-inner section.glossary {
   background-color: #3a3f4a;
+  color: var(--color-dark-text-primary);
 }
 
 body.dark-mode .glossary-title {

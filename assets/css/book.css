@@ -809,6 +809,10 @@ h4.para-title {
   color: var(--color-secondary, #555);
 }
 
+body.dark-mode .footnotes {
+  color: var(--color-dark-text-muted);
+}
+
 /* Tables */
 .book .book-body .page-wrapper .page-inner table {
   border-collapse: collapse;
