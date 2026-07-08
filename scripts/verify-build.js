@@ -61,6 +61,7 @@ const htmlFiles = await glob('**/*.html', { cwd: siteRoot, ignore: 'assets/**' }
 
 const idsByPage = new Map(); // outputPath -> Set(ids)
 const linksByPage = new Map(); // outputPath -> [{href}]
+const canonicals = new Map(); // outputPath -> canonical href
 const abstracts = new Set();
 const chapterNumbers = new Map(); // "vol/ch" -> { figure: [..], equation: [..] }
 
@@ -97,6 +98,9 @@ for (const rel of htmlFiles) {
   linksByPage.set(rel, links);
 
   if ($('.abstract').length > 0) abstracts.add(rel);
+
+  const canonical = $('link[rel="canonical"]').attr('href');
+  if (canonical) canonicals.set(rel, canonical);
 
   $('img[src]').each((_, el) => {
     const src = $(el).attr('src');
@@ -188,6 +192,32 @@ for (const [key, bucket] of chapterNumbers) {
 }
 if (numberingBad === 0) pass('figure/equation numbers sequential per chapter');
 
+// ---------- 5b. canonical links on duplicated shared pages ----------
+// The preface + 7 appendices are shared by all 3 volumes: 8 modules x 2
+// duplicate occurrences = 16 pages carrying <link rel="canonical">.
+const CANONICAL_ORIGIN = 'https://veillette.github.io';
+let canonicalBad = 0;
+for (const [rel, href] of canonicals) {
+  if (!href.startsWith(CANONICAL_ORIGIN + BASE_URL)) {
+    canonicalBad++;
+    fail(`canonical ${href} in ${rel} is not under ${CANONICAL_ORIGIN}${BASE_URL}`);
+    continue;
+  }
+  const target = href.slice(CANONICAL_ORIGIN.length);
+  if (!existsAsPage(target)) {
+    canonicalBad++;
+    fail(`canonical ${href} in ${rel} does not resolve to an emitted page`);
+  } else if (path.join(target.slice(BASE_URL.length), 'index.html') === rel) {
+    canonicalBad++;
+    fail(`canonical in ${rel} points at itself`);
+  }
+}
+if (canonicals.size === 16 && canonicalBad === 0) {
+  pass('16 duplicated shared pages carry a valid canonical link');
+} else if (canonicals.size !== 16) {
+  fail(`expected 16 canonical links, found ${canonicals.size}`);
+}
+
 // ---------- 6. learning objectives ----------
 if (abstracts.size === 270) pass('270 pages with learning-objectives boxes');
 else fail(`expected 270 pages with .abstract, found ${abstracts.size}`);
@@ -203,7 +233,17 @@ if (unitConv.includes('data-label="Example 1.2"') && (unitConv.match(/menclose/g
   pass('1-3-unit-conversion has Example 1.2 and menclose strikes');
 } else fail('1-3-unit-conversion spot check failed');
 
-for (const f of ['SUMMARY.html', 'summary.json', 'index.html']) {
+for (const f of [
+  'SUMMARY.html',
+  'summary.json',
+  'index.html',
+  'manifest.webmanifest',
+  'sw.js',
+  'assets/icons/icon-192.png',
+  'assets/icons/icon-512.png',
+  'assets/js/vendor/minisearch.js',
+  'assets/js/mathjax/fonts/mathjax-newcm-font/chtml.js',
+]) {
   if (fs.existsSync(path.join(siteRoot, f))) pass(`${f} emitted`);
   else fail(`${f} missing`);
 }

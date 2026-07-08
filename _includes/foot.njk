@@ -6,3 +6,14 @@
     >Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a
   >. OpenStax is not affiliated with this site.
 </footer>
+
+<script>
+  // Offline support (sw.njk). Book.baseHref carries the deployment's path
+  // prefix without a trailing slash, so this resolves for both GitHub Pages
+  // and root hosting.
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register(window.Book.baseHref + '/sw.js');
+    });
+  }
+</script>

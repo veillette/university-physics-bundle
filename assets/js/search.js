@@ -11,8 +11,8 @@
  * - Real-time search as you type
  */
 
-// Import MiniSearch from CDN
-import MiniSearch from 'https://cdn.jsdelivr.net/npm/minisearch@7.1.0/+esm';
+// Self-hosted MiniSearch, copied from node_modules by `npm run update:minisearch`
+import MiniSearch from './vendor/minisearch.js';
 import { BookConfig } from './book-config.js';
 
 class SearchManager {

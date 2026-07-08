@@ -10,6 +10,17 @@
 
   <meta name="theme-color" content="#3367D6" />
 
+  {# The shared preface/appendix modules are emitted once per volume; the
+     duplicates carry canonicalUrl (set in lib/book-data.js) pointing at the
+     volume-1 copy. Absolute URL on purpose: it must name the canonical
+     deployment even when this build is hosted elsewhere (e.g. Vercel). #}
+  {% if pg and pg.canonicalUrl %}
+    <link href="{{ site.baseUrl }}{{ pg.canonicalUrl }}" rel="canonical" />
+  {% endif %}
+
+  <link href="/manifest.webmanifest" rel="manifest" />
+  <link href="/assets/icons/icon-192.png" rel="apple-touch-icon" />
+
   <title>
     {% if title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ title }}{% endif %}
   </title>

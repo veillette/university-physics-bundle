@@ -13,7 +13,9 @@
     "serve": "eleventy --serve --port=4000",
     "verify": "node scripts/verify-build.js",
     "clean": "rm -rf _site",
-    "update:mathjax": "rm -rf assets/js/mathjax && mkdir -p assets/js/mathjax && cp node_modules/mathjax/mml-chtml.js assets/js/mathjax/ && cp -r node_modules/mathjax/input node_modules/mathjax/output node_modules/mathjax/ui node_modules/mathjax/a11y node_modules/mathjax/sre assets/js/mathjax/"
+    "update:vendor": "npm run update:mathjax && npm run update:minisearch",
+    "update:mathjax": "rm -rf assets/js/mathjax && mkdir -p assets/js/mathjax/fonts/mathjax-newcm-font && cp node_modules/mathjax/mml-chtml.js assets/js/mathjax/ && cp -r node_modules/mathjax/input node_modules/mathjax/output node_modules/mathjax/ui node_modules/mathjax/a11y node_modules/mathjax/sre assets/js/mathjax/ && cp node_modules/@mathjax/mathjax-newcm-font/chtml.js assets/js/mathjax/fonts/mathjax-newcm-font/ && cp -r node_modules/@mathjax/mathjax-newcm-font/chtml assets/js/mathjax/fonts/mathjax-newcm-font/",
+    "update:minisearch": "rm -rf assets/js/vendor && mkdir -p assets/js/vendor && cp node_modules/minisearch/dist/es/index.js assets/js/vendor/minisearch.js"
   },
   "license": "CC-BY-NC-SA-4.0",
   "devDependencies": {

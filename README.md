@@ -1,16 +1,76 @@
-# University Physics Volume 1, University Physics Volume 2, and University Physics Volume 3
+# University Physics (OpenStax) — browsable HTML edition
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/openstax/osbooks-university-physics-bundle)
+[![Deploy Eleventy site to Pages](https://github.com/veillette/university-physics-bundle/actions/workflows/deploy.yml/badge.svg)](https://github.com/veillette/university-physics-bundle/actions/workflows/deploy.yml)
+[![CI](https://github.com/veillette/university-physics-bundle/actions/workflows/ci.yml/badge.svg)](https://github.com/veillette/university-physics-bundle/actions/workflows/ci.yml)
 
-_University Physics Volume 1, University Physics Volume 2, and University Physics Volume 3_ are textbooks published by [OpenStax](https://openstax.org/), a non profit organization that is part of [Rice University](https://www.rice.edu/).
+**Read online: <https://veillette.github.io/university-physics-bundle/>**
 
-To view these books online and view contributors, please visit:
+This is a fork of the OpenStax
+[osbooks-university-physics-bundle](https://github.com/openstax/osbooks-university-physics-bundle)
+that adds an [Eleventy](https://www.11ty.dev/) build rendering the CNXML source
+of _University Physics_ Volumes 1–3 (338 pages from 322 modules) as a
+browsable, installable web site. The content files (`collections/`, `modules/`,
+`media/`) are **never modified** — all transformation happens at build time, so
+merges from the OpenStax upstream stay clean.
+
+## Features
+
+- Three-volume site with a collapsible sidebar, prev/next navigation, and
+  client-side full-text search (self-hosted [MiniSearch](https://lucaong.github.io/minisearch/))
+- Build-generated, chapter-scoped numbering of figures, tables, equations,
+  examples, and Check Your Understanding boxes, matching openstax.org
+- Math rendered from the source MathML by fully self-hosted **MathJax v4**
+  (script *and* `mathjax-newcm` fonts — no CDN requests)
+- **Progressive Web App**: installable (web manifest + icons) with a service
+  worker that precaches the app shell and serves visited pages, images, and
+  math fonts offline
+- `<link rel="canonical">` on the 16 duplicated pages (the preface and 7
+  appendices are shared by all three volumes) pointing at the Volume 1 copy
+- Post-build verification (`npm run verify`): page counts, link/fragment
+  integrity, media existence, numbering sequences, canonical links, zero CNXML
+  leakage
+
+## Building
+
+```bash
+npm ci
+npm run update:vendor   # copy self-hosted MathJax (+fonts) and MiniSearch into assets/
+npm run build           # build _site/ + search index
+npm run serve           # dev server at http://localhost:4000/university-physics-bundle/
+npm run verify          # post-build checks over _site/
+```
+
+Requires Node ≥ 22. See [BUILDING.md](./BUILDING.md) for architecture,
+deployment (GitHub Pages / Vercel), and gotchas.
+
+## Continuous integration
+
+- [`ci.yml`](.github/workflows/ci.yml) — on pull requests: full build +
+  `npm run verify`
+- [`deploy.yml`](.github/workflows/deploy.yml) — on pushes to `main`: build,
+  verify, and deploy to GitHub Pages
+
+## About the books
+
+_University Physics_ Volumes 1–3 are calculus-based physics textbooks published
+by [OpenStax](https://openstax.org/), a non profit organization that is part of
+[Rice University](https://www.rice.edu/). To view these books and their
+contributors at OpenStax, visit:
+
 - _University Physics Volume 1_ [online](https://openstax.org/details/books/university-physics-volume-1)
 - _University Physics Volume 2_ [online](https://openstax.org/details/books/university-physics-volume-2)
 - _University Physics Volume 3_ [online](https://openstax.org/details/books/university-physics-volume-3)
 
-## License
-_University Physics Volume 1, University Physics Volume 2, and University Physics Volume 3_ are available under the [Creative Commons Attribution-NonCommercial-ShareAlike License](./LICENSE) license.
+OpenStax is not affiliated with this site.
 
-## Support
-If you would like to support the creation of free textbooks for students, your [donations are welcome](https://riceconnect.rice.edu/donation/support-openstax-banner).
+## License
+
+_University Physics_ Volumes 1–3 are available under the
+[Creative Commons Attribution-NonCommercial-ShareAlike License](./LICENSE)
+(CC BY-NC-SA 4.0). The build tooling in this repository is offered under the
+same license.
+
+## Support OpenStax
+
+If you would like to support the creation of free textbooks for students, your
+[donations are welcome](https://riceconnect.rice.edu/donation/support-openstax-banner).

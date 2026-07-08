@@ -10,7 +10,7 @@ merges from the openstax upstream stay clean.
 
 ```bash
 npm ci
-npm run update:mathjax   # copy the self-hosted MathJax bundle into assets/
+npm run update:vendor    # copy the self-hosted MathJax (+fonts) and MiniSearch bundles into assets/
 npm run build            # build _site/ + search index
 npm run serve            # dev server at http://localhost:4000/university-physics-bundle/
 ```
@@ -37,17 +37,44 @@ Requires Node ≥ 22.
   to build the collapsible 3-volume sidebar, prev/next navigation, and SPA
   page swapping.
 - Math is presentation MathML rendered client-side by self-hosted **MathJax v4**
-  (`mml-chtml`), configured in `assets/js/math-config.js`.
+  (`mml-chtml`), configured in `assets/js/math-config.js`. The `mathjax-newcm`
+  fonts are self-hosted too: `math-config.js` points MathJax's `[fonts]` loader
+  path at `assets/js/mathjax/fonts/` (populated by `npm run update:mathjax`),
+  so nothing is fetched from a CDN. The prefix-dependent URL is derived from
+  the config script's own `src` at runtime.
+- The site is an installable **PWA**: `manifest.njk` emits
+  `/manifest.webmanifest` and `sw.njk` emits the service worker `/sw.js` (both
+  as Nunjucks templates so URLs carry the deployment's path prefix, and the
+  precache version tracks the build via `_data/build.js`). The worker
+  precaches the app shell and uses network-first for HTML, cache-first for
+  `media/`/`cover/`/MathJax fonts, and stale-while-revalidate for other
+  assets; registration lives in `_includes/foot.njk`. Icons are in
+  `assets/icons/` (PNGs rasterized from `icon.svg` via a headless-browser
+  canvas).
+- The 16 duplicated pages (preface + 7 appendices × the 2 extra volumes) get
+  `<link rel="canonical">` pointing at the Volume 1 copy: `lib/book-data.js`
+  sets `canonicalUrl` on every occurrence after a module's first, and
+  `_includes/head.njk` emits it as an absolute URL under `site.baseUrl`
+  (`_data/site.js`).
 - `scripts/build-index.js` (postbuild) builds the MiniSearch index over
-  `_site/`; `scripts/verify-build.js` (`npm run verify`) asserts page counts,
-  link/fragment integrity, media existence, numbering sequences, and zero
-  CNXML leakage.
+  `_site/` (search runs client-side on the self-hosted copy of MiniSearch in
+  `assets/js/vendor/`, populated by `npm run update:minisearch`);
+  `scripts/verify-build.js` (`npm run verify`) asserts page counts,
+  link/fragment integrity, media existence, numbering sequences, canonical
+  links on exactly the 16 duplicated pages, and zero CNXML leakage.
 
 ## Deployment
 
 The path prefix is `/university-physics-bundle/` by default (GitHub Pages
 project site). When the `VERCEL` env var is set, the site builds with no
 prefix for root hosting. The built site is ~230 MB, dominated by `media/`.
+
+GitHub Actions:
+
+- `.github/workflows/ci.yml` — pull requests: `npm ci` →
+  `npm run update:vendor` → build → `npm run verify`.
+- `.github/workflows/deploy.yml` — pushes to `main` (and manual dispatch):
+  same build + verify, then deploys `_site/` to GitHub Pages.
 
 ## Known divergences from openstax.org
 
@@ -63,4 +90,11 @@ prefix for root hosting. The built site is ~230 MB, dominated by `media/`.
   keeps transitive imports of `_data/book.js`); restart `npm run serve` after
   editing build code. Content edits under `modules/`/`collections/` rebuild
   fine.
-- `assets/js/mathjax/` is git-ignored and populated by `npm run update:mathjax`.
+- `assets/js/mathjax/` (MathJax + fonts) and `assets/js/vendor/` (MiniSearch)
+  are git-ignored and populated by `npm run update:vendor`; a fresh clone
+  must run it before building or math/search will 404.
+- When testing the service worker against a static server without
+  `Cache-Control` headers (e.g. `python3 -m http.server`), the browser's
+  heuristic HTTP cache can serve stale JS that looks like a service-worker
+  bug; test in a fresh browser profile/context. GitHub Pages sends
+  `max-age=600`, so deployed clients settle within minutes.
